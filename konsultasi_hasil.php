@@ -82,10 +82,9 @@ $rows = $db->get_results("SELECT *
 //Fungsi menghitung bobot
 $hit=1;$num=0;$temp;
 foreach($rows as $row){   
-        // print_r($row->jawaban);         
+               
     if ($temp == $row->kode_tumbuhan || ($num==0 && $hit==1)) {                        
-        if($row->jawaban == 'Ya'){            
-            print('MASUK');
+        if($row->jawaban == 'Ya'){                        
         $num+=10;
         }
         else{            

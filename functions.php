@@ -36,7 +36,7 @@ function get_terjawab(){
 
 function  get_next_penyakit($relasi){
     eliminate_relasi($relasi);
-    print_r($relasi);
+    // print_r($relasi);
     foreach($relasi as $key => $val){
         foreach($val as $k => $v){
             if($v=='')
