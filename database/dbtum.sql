@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Nov 2019 pada 16.21
--- Versi server: 10.3.16-MariaDB
--- Versi PHP: 7.3.7
+-- Generation Time: Jul 23, 2020 at 07:35 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hamanaga`
+-- Database: `dbtum`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -34,181 +34,252 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`user`, `pass`) VALUES
-('arfa', 'yunida');
+('febri', '12345');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gejala`
---
-
-CREATE TABLE `gejala` (
-  `kode_gejala` varchar(16) NOT NULL,
-  `nama_gejala` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `gejala`
---
-
-INSERT INTO `gejala` (`kode_gejala`, `nama_gejala`) VALUES
-('G01a', 'Kerusakan berada di buah'),
-('G01b', 'Terdapat kerusakan di buah'),
-('G01c', 'Kerusakan berada di buah'),
-('G01d', 'Terdapat kerusakan di buah'),
-('G02a', 'Kerusakan berada di sulur atau batang'),
-('G02b', 'Kerusakan berada di batang atau sulur'),
-('G02c', 'Terdapat kerusakan di sulur atau batang'),
-('G03', 'Kerusakan berada di buah dan sulur'),
-('G04', 'Buah terlihat berlubang'),
-('G05', 'Lubang berbentuk khas bekas patukan paruh'),
-('G06', 'Daging buah terlihat kosong'),
-('G07', 'Buah menjadi busuk'),
-('G08', 'Terdapat bintik-bintik halus kecoklatan di batang'),
-('G09', 'Jaringan klorofil pada kulit cabang (kulit batang) berubah menjadi warna coklat'),
-('G10', 'Terdapat bercak-bercak kecil, kering, timbul dan kasar jika diraba'),
-('G11', 'Pusat bercak berwarna coklat tua dilingkari warna coklat yang lebih muda'),
-('G12', 'Terdapat kusam pada sulur'),
-('G13', 'Terdapat bekas gigitan di bagian pinggir batang atau sulur'),
-('G14', 'Bekas gigitan bagian ujungnya bergerigi tipis dan halus seperti bekas parutan'),
-('G15', 'Tunas terlihat rusak dan mengering di bekas parutan'),
-('G16', 'Terdapat jejak berupa lendir berwarna keperakan'),
-('G17', 'Batang tanaman buah naga berlubang dan habis'),
-('G18', 'Terdapat kotoran berwarna hitam pada sulur atau tiang penyangga atau permukaan tanah'),
-('G19', 'Terdapat bekas cangkang di sekitar tanaman buah naga'),
-('G20', 'Kulit buah atau sulur dipenuhi luka-luka kecil dan kasar'),
-('G21', 'Bekas gigitan berupa bercak kecil berwarna coklat kehitaman di buah atau sulur'),
-('G22', 'Timbul titik kecil di permukaan buah'),
-('G23', 'Terdapat bercak lebar dan basah di permukaan buah'),
-('G24', 'Buah membusuk'),
-('G25', 'Jika buah dibelah, akan dijumpai beberapa ulat atau larva berwarna putih keruh'),
-('G26', 'Buah gugur dari pohon'),
-('G27', 'Luka akibat gigitan berwarna coklat pada permukaan kulit buah'),
-('G28', 'Terdapat bekas gigitan bergerigi, kasar dan sobek'),
-('G29', 'Permukaan kulit buah berselaput kering dan tampak kotor'),
-('G30', 'Terdapat lilin berwarna putih di permukaan buah'),
-('G31', 'Buah agak berkerut'),
-('G32', 'Buah menguning'),
-('G33', 'Buah mengecil'),
-('G34', 'Buah kempes'),
-('G35', 'Buah layu'),
-('G36', 'Buah kering'),
-('G37', 'Bekas gigitan yang bergerigi dan sobek menjadi mengering');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `hama`
---
-
-CREATE TABLE `hama` (
-  `kode_hama` varchar(16) NOT NULL,
-  `nama_hama` varchar(255) DEFAULT NULL,
-  `solusi` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `hama`
---
-
-INSERT INTO `hama` (`kode_hama`, `nama_hama`, `solusi`) VALUES
-('H001', 'Bekicot (Achatina fulica)', 'a. Melakukan pemungutan dan pemusnakan bekicot yang ditemukan di kebun buah naga.<br>\r\nb. Menjaga kebersihan kebun dengan cara sanitasi kebun dari gulma yang menjadi sarang bekicot untuk berkembang biak.<br>\r\nc. Menggunakan umpan beracun seperti pepaya muda yang dicincang atau bekatul yang dicampur dengan insektisida atau molukisida.'),
-('H002', 'Kutu Putih (Mealybugs)', 'a. Membersihkan lingkungan pertanaman dari gulma.<br>\r\nb. Tidak menanam tanaman buah naga berdekatan dengan tanaman inang hama ini, seperti papaya, rambutan, kopi, dan lain-lain.<br>\r\nc. Melakukan pemasangan likat kuning sebanyak 60 buah dalam 1 hektar.<br>\r\nd. Pembungkusan buah menggunakan kantong plastik.<br>\r\ne. Penggunaan agensi hayati (entomopathogen) Beauveria bassiana (jamur untuk melawan hama).<br>\r\nf. Menggunakan pestisida nabati berbahan dasar kulit jeruk atau biji sirsak, dibumbuk lalu disemprotkan ke bagian yang terserang hama.<br>\r\ng. Apabila serangan cukup tinggi, kendalikan dengan akarisida dan atau insektisida.'),
-('H003', 'Burung (Aves)', 'a. Membudidayakan buah naga dijauhkan dari tanaman buah-buahan lain seperti pisang dan pepaya.<br>\r\nb. Usir hama burung apabila terlihat sedang menyerang buah naga.<br>\r\nc. Buah dibungkus menggunakan kantong plastik agar buah terlihat samar oleh burung.'),
-('H004', 'Lalat Buah (Bactrocera papayae)', 'a. Tidak menanam buah naga berdekatan dengan tanaman inang Bactrocera papayae, contohnya cabe, pepaya, tomat, dan terong.<br>\r\nb. Buah yang terserang lalat buah baik yang masih dipohon atau sudah gugur dikumpulkan dan dimusnahkan dengan cara dikubur. <br>\r\nc. Pemasangan perangkap lalat buah dengan menggunakan atraktan metil eugenol, dengan jumlah perangkap 40 â€“ 50 buah/Ha dan dilakukan dalam wilayah yang relatif luas serta secara terus menerus. <br>\r\nd. Buah dibungkus dengan kantong plastik agar lalat tidak dapat singgah.'),
-('H005', 'Tungau (Tetranychus sp.)', 'a. Memasang likat kuning atau perangkap kuning kurang lebih 50 buah dalam 1 hektar.<br>\r\nb. Sanitasi lahan dari tanaman yang menjadi inang lain hama ini, seperti singkong, cabai, pepaya, terong, dan lain-lain.<br>\r\nc. Penggunaan insektisida nabati berbahan baku akar tuba, daun papaya, daun sirsak, mimba, sereh, bawang putih, bawang merah, lada, cabai.<br>\r\nd. Apabila serangan cukup tinggi, dapat dikendalikan dengan penggunaan akarisida atau insektisida yang efektif, penyemprotan dilakukan pada bagian cabang atau batang.'),
-('H006', 'Kumbang (Hypomeces squamosus)', 'a. Apabila ditemukan kumbang di kebun buah naga, segera pungut dan musnahkan.<br>\r\nb. Sanitasi lahan dan lingkungan pertanaman dari pohon atau tanaman lain yang menjadi inang tanaman ini, seperti jeruk, mangga, pohon gamal, rambutan, dan lain-lain.'),
-('H007', 'Belalang (Aularches miliaris)', 'a. Sanitasi lingkungan pertanaman dari gulma.<br>\r\nb. Tidak menanam buah naga berdekatan dengan pohon lain yang disukai belalang, misalnya jagung.\r\n');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `konsultasi`
+-- Table structure for table `konsultasi`
 --
 
 CREATE TABLE `konsultasi` (
   `ID` int(11) NOT NULL,
-  `kode_gejala` varchar(16) DEFAULT NULL,
+  `kode_penyakit` varchar(16) DEFAULT NULL,
   `jawaban` varchar(6) DEFAULT 'Tidak'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `konsultasi`
+-- Dumping data for table `konsultasi`
 --
 
-INSERT INTO `konsultasi` (`ID`, `kode_gejala`, `jawaban`) VALUES
-(1, 'G02a', 'Ya');
+INSERT INTO `konsultasi` (`ID`, `kode_penyakit`, `jawaban`) VALUES
+(1, 'P01', 'Ya'),
+(2, 'P02', 'Ya'),
+(3, 'P03', 'Ya');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `relasi`
+-- Table structure for table `penyakit`
+--
+
+CREATE TABLE `penyakit` (
+  `kode_penyakit` varchar(16) NOT NULL,
+  `nama_penyakit` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `penyakit`
+--
+
+INSERT INTO `penyakit` (`kode_penyakit`, `nama_penyakit`) VALUES
+('P01', 'Kondisi kulit yang terjadi ketika folikel rambut tersumbat minyak dan sel-sel mati (Jerawatan)'),
+('P02', 'Rambut yang berubah warna menjadi abu-abu kemudian putih (Uban)'),
+('P03', 'Penyakit kronis yang ditandai dengan ciri-ciri berupa tingginya kadar gula (Diabetes)'),
+('P04', 'Penyakit yang disebabkan oleh parasit plasmodium, ditularkan melalui gigitan nyamuk yang terinfeksi (Malaria)'),
+('P05', 'Infeksi cacing atau parasit yang tinggal didalam usus manusia (Cacingan)'),
+('P06', 'Buang air besar dengan frekuensi yang tinggi, sulit ditahan, disertai tinja yang lembek, dan berair (Diare)'),
+('P07', 'Infeksi jamur pada kulit yang menimbulkan ruam melingkar berwarna merah (Kurap)'),
+('P08', 'Kulit Gatal-Gatal'),
+('P09', 'Susah buang angin'),
+('P10', 'Kelenjar keringat tubuh tidak berfungsi dengan baik (hipohidrosis/susah berkeringat)'),
+('P11', 'Rasa sakit akibat peradangan dan pembengkakan pada otot dan persendian (Rematik)'),
+('P12', 'Nafsu makan berkurang '),
+('P13', 'Kangker Jaringan pembentuk darah'),
+('P14', 'Seksual Kurang Bergairah'),
+('P15', 'Sakit Perut'),
+('P16', 'Luka Bakar'),
+('P17', 'Stamina tidak stabil'),
+('P18', 'Suhu tubuh berada di atas 38 derajat celcius (Demam)'),
+('P19', 'Rasa nyeri setelah melahirkan'),
+('P20', 'Kaki Bengkak'),
+('P21', 'Infeksi virus yang menyerang hidung, tenggorokan, dan paru-paru (Influenza/Flu)'),
+('P22', 'Hidung tersumbat maupun berair (Pilek)'),
+('P23', 'Terkena gigitan binatang berbisa'),
+('P24', 'Kram dan nyeri pinggul saat Haid'),
+('P25', 'Air Susu Ibu Kurang Lancar'),
+('P26', 'Kantong sempit berisi nanah yang berkumpul di jaringan, organ, atau ruang di dalam tubuh (Bisul)'),
+('P27', 'Serpihan kulit kepala berwarna putih atau keabu-abuan (ketombe)'),
+('P28', 'Daya Tahan Tubuh Lemah'),
+('P29', 'Kadar Kolesterol darah tinggi'),
+('P30', 'Kondisi jantung yang mencakup pembuluh yang sakit, masalah struktur, dan pembekuan darah (Sakit Jantung)'),
+('P31', 'Tekanan darah terhadap dinding arteri terlalu tinggi (Tekanan Darah Tinggi)'),
+('P32', 'Nyeri atau peradangan di dalam atau di sekitar gigi, karena kerusakan atau infeksi gigi (Sakit Gigi)'),
+('P33', 'Bengkaknya pembuluh darah di sekitar anus (Ambeien)'),
+('P34', 'Berkumpulnya gas yang tidak merata di dalam tubuh (Masuk Angin)'),
+('P35', 'Kanker pada Payudara'),
+('P36', 'Gangguan Paru-Paru seperti flu, bronkitis, pneumonia, akibat bakteri '),
+('P37', 'Mengalami Nyeri pada Otot'),
+('P38', 'Susah Kencing'),
+('P39', 'Mengalami Keputihan'),
+('P40', 'Sakit Mata'),
+('P41', 'Luka Akibat Gigitan Ular'),
+('P42', 'Keadaan Kulit dan bagian putih mata menjadi berwarna kuning (Sakit Kuning)'),
+('P43', 'Peradangan pada hati atau liver (Hepatitis) '),
+('P44', 'Keadaan ketika tekanan darah dalam arteri lebih rendah dibandingkan normal (tekanan darah rendah)');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `relasi`
 --
 
 CREATE TABLE `relasi` (
   `ID` int(11) NOT NULL,
-  `kode_hama` varchar(16) DEFAULT NULL,
-  `kode_gejala` varchar(16) DEFAULT NULL,
-  `mb` double DEFAULT NULL,
-  `md` double DEFAULT NULL
+  `kode_tumbuhan` varchar(16) DEFAULT NULL,
+  `kode_penyakit` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `relasi`
+-- Dumping data for table `relasi`
 --
 
-INSERT INTO `relasi` (`ID`, `kode_hama`, `kode_gejala`, `mb`, `md`) VALUES
-(197, 'H001', 'G02a', 0.8, 0.2),
-(198, 'H001', 'G13', 1, 0),
-(199, 'H001', 'G14', 0.8, 0.2),
-(200, 'H001', 'G15', 0.5, 0.5),
-(201, 'H001', 'G16', 1, 0),
-(202, 'H001', 'G17', 0.1, 0.9),
-(203, 'H001', 'G18', 0.9, 0.1),
-(204, 'H001', 'G19', 0.8, 0.2),
-(205, 'H002', 'G01a', 0.7, 0.3),
-(206, 'H002', 'G29', 0.5, 0.5),
-(207, 'H002', 'G30', 0.7, 0.3),
-(208, 'H002', 'G31', 0.8, 0.2),
-(209, 'H002', 'G32', 0.6, 0.4),
-(210, 'H002', 'G33', 0.8, 0.2),
-(211, 'H002', 'G34', 0.8, 0.2),
-(212, 'H002', 'G35', 0.9, 0.1),
-(213, 'H002', 'G36', 0.8, 0.2),
-(214, 'H003', 'G01b', 0.8, 0.2),
-(219, 'H003', 'G04', 0.9, 0.1),
-(220, 'H003', 'G05', 1, 0),
-(221, 'H003', 'G06', 1, 0),
-(222, 'H003', 'G07', 0.5, 0.5),
-(223, 'H004', 'G01c', 1, 0),
-(224, 'H004', 'G22', 0.5, 0.5),
-(225, 'H004', 'G23', 0.9, 0.1),
-(226, 'H004', 'G24', 1, 0),
-(227, 'H004', 'G25', 1, 0),
-(228, 'H004', 'G26', 0.9, 0.1),
-(229, 'H005', 'G02b', 0.5, 0.5),
-(230, 'H005', 'G08', 0.8, 0.2),
-(231, 'H005', 'G09', 0.9, 0.1),
-(232, 'H005', 'G10', 0.9, 0.1),
-(233, 'H005', 'G11', 0.3, 0.7),
-(234, 'H005', 'G12', 0.6, 0.4),
-(235, 'H006', 'G01d', 0.6, 0.4),
-(236, 'H006', 'G02c', 0.6, 0.4),
-(237, 'H006', 'G20', 0.7, 0.3),
-(238, 'H006', 'G21', 0.8, 0.2),
-(239, 'H007', 'G03', 0.7, 0.3),
-(240, 'H007', 'G27', 0.8, 0.2),
-(241, 'H007', 'G28', 0.8, 0.2),
-(242, 'H007', 'G37', 0.8, 0.2);
+INSERT INTO `relasi` (`ID`, `kode_tumbuhan`, `kode_penyakit`) VALUES
+(247, 'T01', 'P01'),
+(248, 'T02', 'P02'),
+(250, 'T03', 'P03'),
+(251, 'T03', 'P04'),
+(252, 'T03', 'P05'),
+(253, 'T03', 'P06'),
+(254, 'T03', 'P07'),
+(255, 'T03', 'P08'),
+(256, 'T04', 'P03'),
+(257, 'T13', 'P03'),
+(258, 'T14', 'P03'),
+(259, 'T17', 'P03'),
+(260, 'T21', 'P03'),
+(261, 'T06', 'P04'),
+(262, 'T07', 'P04'),
+(263, 'T08', 'P04'),
+(264, 'T09', 'P04'),
+(265, 'T11', 'P04'),
+(266, 'T17', 'P04'),
+(267, 'T07', 'P06'),
+(268, 'T17', 'P06'),
+(269, 'T18', 'P06'),
+(270, 'T19', 'P06'),
+(271, 'T08', 'P08'),
+(272, 'T05', 'P09'),
+(273, 'T05', 'P10'),
+(274, 'T05', 'P12'),
+(275, 'T05', 'P11'),
+(276, 'T06', 'P13'),
+(277, 'T06', 'P14'),
+(278, 'T07', 'P15'),
+(279, 'T07', 'P13'),
+(280, 'T14', 'P13'),
+(281, 'T19', 'P13'),
+(282, 'T15', 'P15'),
+(283, 'T08', 'P16'),
+(284, 'T08', 'P17'),
+(285, 'T09', 'P17'),
+(286, 'T14', 'P17'),
+(287, 'T20', 'P16'),
+(288, 'T10', 'P18'),
+(289, 'T10', 'P19'),
+(290, 'T10', 'P20'),
+(291, 'T11', 'P20'),
+(292, 'T11', 'P21'),
+(293, 'T11', 'P22'),
+(294, 'T16', 'P18'),
+(295, 'T20', 'P20'),
+(296, 'T22', 'P20'),
+(297, 'T12', 'P23'),
+(298, 'T12', 'P24'),
+(299, 'T13', 'P25'),
+(300, 'T13', 'P26'),
+(301, 'T16', 'P25'),
+(302, 'T17', 'P26'),
+(303, 'T22', 'P26'),
+(304, 'T14', 'P27'),
+(305, 'T14', 'P28'),
+(306, 'T16', 'P29'),
+(307, 'T16', 'P30'),
+(308, 'T19', 'P29'),
+(309, 'T21', 'P29'),
+(310, 'T13', 'P31'),
+(311, 'T14', 'P31'),
+(312, 'T17', 'P31'),
+(313, 'T21', 'P31'),
+(314, 'T17', 'P32'),
+(315, 'T18', 'P33'),
+(316, 'T19', 'P34'),
+(317, 'T19', 'P36'),
+(318, 'T20', 'P37'),
+(319, 'T20', 'P38'),
+(320, 'T20', 'P39'),
+(321, 'T22', 'P40'),
+(322, 'T22', 'P41'),
+(323, 'T23', 'P03'),
+(324, 'T25', 'P03'),
+(325, 'T25', 'P04'),
+(326, 'T24', 'P04'),
+(327, 'T25', 'P08'),
+(328, 'T25', 'P11'),
+(329, 'T28', 'P15'),
+(330, 'T28', 'P19'),
+(331, 'T27', 'P25'),
+(332, 'T23', 'P31'),
+(333, 'T26', 'P32'),
+(334, 'T24', 'P42'),
+(335, 'T24', 'P43'),
+(336, 'T28', 'P44');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `userkonsul`
+-- Table structure for table `tumbuhan`
+--
+
+CREATE TABLE `tumbuhan` (
+  `kode_tumbuhan` varchar(16) NOT NULL,
+  `nama_tumbuhan` varchar(255) DEFAULT NULL,
+  `khasiat` text DEFAULT NULL,
+  `solusi` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tumbuhan`
+--
+
+INSERT INTO `tumbuhan` (`kode_tumbuhan`, `nama_tumbuhan`, `khasiat`, `solusi`) VALUES
+('T01', 'limpasu', 'Jerawat', 'Buah limpasu ditumbuk sampai halus kemudian oleskan pada wajah yang mengalami jerawatan.'),
+('T02', 'Ulin ', 'Penghitam rambut  mencegah rambut beruban', 'Campurkan bagian dalam buah yang telah dikeringkan dengan minyak kelapa, dan oleskan pada rambut.'),
+('T03', 'Sahang burung', 'Diabetes , malaria , cacingan , diare , kurap , gatal - gatal', 'Buah direbus kemudian minum air rebusan tersebut untuk menurunkan kadar gula darah pada penderita diabetes. Akar direbus kemudian diminum bagi penderita malaria, cacingan, dan diare. daunnya dihaluskan kemudian oleskan pada bagian tubuh yang mengalami penyakit seperti kurap, dan kulit gatal-gatal.'),
+('T04', 'Jengkol', 'obat diabetes', 'Akar jengkol direbus sampai mendidih kemudian air rebusannya diminum.'),
+('T05', 'Kayu Manis', 'Susah buang angin , Susah keringat , rematik , meningkatkan nafsu makan .', 'Daun atau akar direbus sampai mendidih kemudian air rebusannya diminum.'),
+('T06', 'Pasak Bumi', 'Malaria , anti kanker , antileukimia , afrodisiak', 'Sediakan akar dari pasak bumi yang kering kemudian seduh sampai berubah warna selama 1 jam dengan 1 gelas air, kemudian airnya diminum.'),
+('T07', 'Langsat', 'Sakit perut , diare , malaria , kanker', 'Rebus kulit bagian batang langsat sampai mendidih kemudian diminum.'),
+('T08', 'Sungkai', 'Malaria , menjaga stamina , penyakit kulit (gatal gatal) , luka bakar', 'Rebus kulit bagian batang kemudian diminum untuk menjaga stamina tubuh dan mengobati malaria. Daun dihaluskan kemudian dioleskan pada bagian kulit yang mengalami luka bakar. Rebuskan daun sungkai untuk mengobati kulit gatal-gatal.'),
+('T09', 'Alaban/leban', 'Menjaga stamina , malaria', 'Rebus daun atau kulit batang sampai mendidih kemudian air rebusannya diminum untuk menjaga stamina tubuh. untuk mengobati malaria dengan cara memakan bijinya yang telah dihaluskan. '),
+('T10', 'Kedemba', 'Demam , pasca melahirkan', 'Kulit batang dari pohon kedemba direbus kemudian air rebusannya diminum.'),
+('T11', 'Keminting/perija', 'Malaria , kaki bengkak pada wanita yang baru melahirkan , flu , pilek', 'Kulit batang dari pohon direbus kemudian diminum untuk mengobati malaria. kaki bengkak pada wanita yang baru melahirkan dapat diobati dengan membakar/menghangatkan kulit bagian batang, diatas api kemudian menginjakkan kaki yang bengkak pada bagian kulit yang telah dihangatkan. bagian dalam buah dihaluskan dan dioleskan pada hidung untuk mengobati flu dan pilek. '),
+('T12', 'Kenanga/kernanga', 'Penawar racun gigitan binatang berbisa, nyeri haid', 'Kulit bagian dalam dan kambium dikerik kemudian dioleskan ke bagian yang terkena bisa gigitan binatang. Bunga segarnya diseduh dengan segelas air panas setelah hangat dapat diminum untuk mengobati nyeri haid.  '),
+('T13', 'Karatau', 'Meningkatkan air susu ibu (ASI), bisul, diabetes, hipertensi, rematik', 'Perbanyak ASI dengan cara memasak daun karatau sebagai sayur. untuk mengobati bisul, rebus daun yang segar sebanyak 1 genggam kemudian diminum. sedangkan untuk mengobati diabetes, hipertensi, dan rematik kita dapat merebus daun atau akar karatau kemudian meminum air rebusannya pada pagi hari dan sore hari. '),
+('T14', 'Mengkudu', 'Ketombe, hipertensi, diabetes, daya tahan tubuh, anti septik, anti bakteri, anti kanker', 'Buah mengkudu dihaluskan atau diparut dan disaring kemudian diminum untuk mengobati diabetes dan hipertensi. Daging buah mengkudu digunakan sebagai shampo untuk menghilangkan ketombe. Akar mengkudu direbus kemudian diminum untuk menambah daya tahan tubuh, dan mengobati kanker.'),
+('T15', 'Kupang/Kedaung', 'Sakit perut', 'Rebus akar kupang kemudian air rebusannya diminum'),
+('T16', 'Sukun', 'Anti demam , perlancar ASI , Kadar kolesterol darah , menjaga kesehatan jantung', 'Daun sukun direbus kemudian air rebusannya diminum untuk mencegah demam dan kulit buah dapat memperlancar ASI dengan cara meminum air rebusannya. Ekstrak daun sukun dapat mencegah berbagai penyakit seperti kadar kolesterol darah,  dan menjaga kesehatan jantung.'),
+('T17', 'Pulai/plai', 'Diabetes , kencing manis , menurunkan tekanan darah , diare , malaria, bisul , sakit gigi', 'Kulit batang pulai/plai dikeringkan kemudian direbus dan meminum air rebusannya untuk mengobati kencing manis, menurunkan tekanan darah, diare, dan malaria. sedangkan getahnya digunakan untuk mengobati sakit gigi yang berlubang dengan cara dioleskan pada gusi dan lubang gigi.'),
+('T18', 'Kayu serai', 'Diare , ambeien , pasca melahirkan', 'Rebus kulit bagian dalam kemudian air rebusannya diminum untuk mengobati diare, ambien sedangkan kulit batangnya digunakan untuk mengobati rasa sakit setelah melahirkan dengan cara meminum air rebusan kulit batangnya. '),
+('T19', 'Nangka belanda/sirsak', 'Menghilangkan masuk angin , diare , membunuh sel kanker payudara , liver , paru – paru , menurunkan kolesterol', 'Untuk menghilangkan masuk angin tempelkan daun pada bagian yang sakit dengan tambahan kapur sirih. daun direbus dan diminum untuk mengobati diare. bukti riset ilmiah menunjukan ekstrak daun nangka belanda sangat potensial dalam membunuh sel kanker payudara, liver, paru-paru, dan menurunkan kolesterol.'),
+('T20', 'Uduk-uduk / Keramunting', 'Pereda demam , penghilang nyeri , peluruh urin , keputihan , mengurangi bengkak , Luka bakar', 'Kupas bagian batang yang muda kemudian dimakan untuk menghilangkan nyeri. Daun segar ditambah sedikit garam kemudian dikunyah dan airnya ditelan (mengobati keputihan). untuk mengobati luka bakar haluskan daun keramunting kemudian bubuhkan pada bagian yang terluka.'),
+('T21', 'Tangkan putih / tawar seribu', 'Kolesterol , diabetes , hipertensi', 'Akarnya direbus kemudian diminum untuk mengobati penyakit seperti kolesterol, diabetes, hipertensi'),
+('T22', 'Bamban', 'Sakit mata , bisul , bengkak , luka gigitan ular .', 'Mengambil air yang terdapat dalam gulungan pucuk daun, kemudian diteteskan pada bagian mata yang sakit. daun yang segar dihaluskan kemudian ditempelkan pada bisul dan bagian yang bengkak. Cara mengobati luka gigitan ular dengan memotong batang yang masih mudah, cair yang keluar dari potongan diambil dan dioleskan pada luka bekas gigitan ular kemudian dibalut dengan kain bersih.'),
+('T23', 'Kelubut / Kemot', 'Diabetes , hipertensi', 'Merebus semua bagian tumbuhan kemudian diminum untuk mengobati diabetes dan hipertensi. '),
+('T24', 'Akar Kuning', 'Sakit kuning , hepatitis , malaria', 'Bagian yang digunakan adalah akar dan batang kemudian direbus dan diminum'),
+('T25', 'Akar Sampai', 'Diabetes , malaria , reumatik , Kulit gatal , luka', 'Daun atau kulit batang dihaluskan kemudian ditelan dengan buah pisang untuk mengobati luka dan kulit gatal-gatal. air rebusan batang digunakan untuk membersih luka dan dapat juga diminum untuk mengobati diabetes, malaria, dan reumatik.'),
+('T26', 'Litu / mitu', 'Sakit pada tulang , sakit pada persendian , sakit gigi', 'Bagian akar litu yang mudah ditumbuk halus lalu ditambahkan air matang dan diperas, air perasan digunakan untuk kumur-kumur (obat sakit gigi). Air rebusan akar dan daun dapat diminum untuk mengobati sakit pada tulang dan sakit persendian.'),
+('T27', 'Kelakai / Paku haruan', 'Meningkatkan air susu ibu (ASI) , hipotensi , anemia .', 'Daun yang masih muda dimasak sebagai sayur untuk mengobati hipotensi, meningkatkan ASI, dan anemia.'),
+('T28', 'Sembora / tembora', 'Sakit perut ,  batuk , persalinan , pasca melahirkan', 'Untuk mengatasi batuk, pasca melahirkan, dan melancarkan persalinan, cukup dengan merebus bagian daun kemudian diminum.  untuk mengatasi sakit perut daun diremas-remas dan dicampur dengan kapur kemudian oleskan pada bagian perut yang sakit.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userkonsul`
 --
 
 CREATE TABLE `userkonsul` (
@@ -221,73 +292,75 @@ CREATE TABLE `userkonsul` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `userkonsul`
+-- Dumping data for table `userkonsul`
 --
 
 INSERT INTO `userkonsul` (`id_user`, `nama`, `nohp`, `jeniskelamin`, `alamat`, `tanggalkonsultasi`) VALUES
-(17, 'arfa', '312', 'perempuan', 'jalan', '2019-11-09');
+(46, 'jossa anno', '082353351914', 'perempuan', 'jln kh wahid hasyim II', '2020-07-15'),
+(50, 'febrinata', '082353351914', 'lakilaki', 'jln kh wahid hasyim II', '2020-07-23'),
+(51, 'febrinata', '082353351914', 'lakilaki', 'jln kh wahid hasyim II', '2020-07-23');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`user`);
 
 --
--- Indeks untuk tabel `gejala`
---
-ALTER TABLE `gejala`
-  ADD PRIMARY KEY (`kode_gejala`);
-
---
--- Indeks untuk tabel `hama`
---
-ALTER TABLE `hama`
-  ADD PRIMARY KEY (`kode_hama`);
-
---
--- Indeks untuk tabel `konsultasi`
+-- Indexes for table `konsultasi`
 --
 ALTER TABLE `konsultasi`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indeks untuk tabel `relasi`
+-- Indexes for table `penyakit`
+--
+ALTER TABLE `penyakit`
+  ADD PRIMARY KEY (`kode_penyakit`);
+
+--
+-- Indexes for table `relasi`
 --
 ALTER TABLE `relasi`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indeks untuk tabel `userkonsul`
+-- Indexes for table `tumbuhan`
+--
+ALTER TABLE `tumbuhan`
+  ADD PRIMARY KEY (`kode_tumbuhan`);
+
+--
+-- Indexes for table `userkonsul`
 --
 ALTER TABLE `userkonsul`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `konsultasi`
+-- AUTO_INCREMENT for table `konsultasi`
 --
 ALTER TABLE `konsultasi`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `relasi`
+-- AUTO_INCREMENT for table `relasi`
 --
 ALTER TABLE `relasi`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=337;
 
 --
--- AUTO_INCREMENT untuk tabel `userkonsul`
+-- AUTO_INCREMENT for table `userkonsul`
 --
 ALTER TABLE `userkonsul`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
